@@ -8,7 +8,7 @@
 " LastChange: 2018-11-29
 " Description:配置文件需要安装vim插件
 "             1. sudo apt-get install vim vim-scripts vim-doc；
-"             2. 生成索引：sudo apt-get install ctags
+"             2. 生成索引：sudo apt-get install universal-ctags
 "                如果是查看linux内核那么在内核目录下的script目录下有tags.sh脚本
 "                可以生成对应架构的tags文件：make tags ARCH=arm
 "             3. sudo apt-get install cscope
@@ -166,9 +166,9 @@ set expandtab			   " 缩进用空格来表示，noexpandtab用制表符表示一
 set tabstop=4              " 设置制表符(tab键)的宽度.
 set softtabstop=4          " 设置软制表符的宽度,回退时回退到缩进的长度.
 set shiftwidth=4           " (自动) 缩进使用4个空格.
-set cindent                " 使用 C/C++ 语言的自动缩进方式.
+" set cindent                " 使用 C/C++ 语言的自动缩进方式.
 " 设置C/C++语言的具体缩进方式
-set cinoptions={0,1s,t0,n,p2s,(04s,=.5s,>1s,=1s,:1s
+" set cinoptions={0,1s,t0,n,p2s,(04s,=.5s,>1s,=1s,:1s
 set backspace=indent,eol,start
 " set backspace=2          " 设置退格键可用
 set autoindent             " 设置自动对齐(缩进)：即每行的缩进值与上一行相等;
@@ -309,7 +309,6 @@ imap <F1> <ESC>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> :Tli
 " ctags DB位置,可修改为自己的路径
 set tags=tags
 set tags+=./tags           " add current directory's generated tags file.
-set tags=/home/takeno/projects/linux/iTop4412_Kernel_3.0/tags
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
